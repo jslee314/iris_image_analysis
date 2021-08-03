@@ -14,6 +14,7 @@ image_names = []
 
 size = 640, 480
 for i, image_path in enumerate(image_paths):
+
     image_names.append(image_path.split("\\")[-1])
     image_rgb = Image.open(image_path).convert("RGB")
     image_rgb = image_rgb.resize(size, resample=Image.BICUBIC)
